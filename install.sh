@@ -8,6 +8,7 @@ fi
 # Copy files
 mkdir -p /opt/amdgpu-fancontrol
 cp amdgpu-fancontrol /opt/amdgpu-fancontrol/
+chmod -x /opt/amdgpu-fancontrol/amdgpu-fancontrol
 cp amdgpu-fancontrol.cfg /opt/amdgpu-fancontrol/
 mkdir -p /etc/systemd/system
 cp amdgpu-fancontrol.service /etc/systemd/system/
