@@ -6,7 +6,7 @@ Run [install.sh](https://github.com/hat3ph/amdgpu-fancontrol/blob/master/install
 
 Configure /opt/amdgpu-fancontrol/amdgpu-fancontrol.cfg to custom the temperature and pwm fa speed.
 
-Formula: PWM=FS%/255
+Formula: PWM=FS%x255
 
 * PWM is between 0 - 255
 
