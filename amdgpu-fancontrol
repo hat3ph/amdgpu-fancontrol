@@ -16,7 +16,8 @@ FILE_TEMP=$(echo /sys/class/drm/card0/device/hwmon/hwmon?/temp1_input)
 #FILE_TEMP_CRIT=$(echo /sys/class/hwmon/hwmon?/temp1_crit_hyst)
 
 # load configuration file if present
-[ -f /opt/amdgpu-fancontrol/amdgpu-fancontrol.cfg ] && . /opt/amdgpu-fancontrol/amdgpu-fancontrol.cfg
+#[ -f /opt/amdgpu-fancontrol/amdgpu-fancontrol.cfg ] && . /opt/amdgpu-fancontrol/amdgpu-fancontrol.cfg
+[ -f $(dirname "$(realpath "$0")")/amdgpu-fancontrol.cfg ] && . $(dirname "$(realpath "$0")")/amdgpu-fancontrol.cfg
 
 [[ -f "$FILE_PWM" && -f "$FILE_FANMODE" && -f "$FILE_TEMP" ]] || { echo "invalid hwmon files" ; exit 1; }
 
