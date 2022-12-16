@@ -9,7 +9,11 @@ fi
 mkdir -p /opt/amdgpu-fancontrol
 cp amdgpu-fancontrol /opt/amdgpu-fancontrol/
 chmod +x /opt/amdgpu-fancontrol/amdgpu-fancontrol
-cp amdgpu-fancontrol.cfg /opt/amdgpu-fancontrol/
+if [[ -f "/opt/amdgpu-fancontrol/amdgpu-fancontrol.cfg" ]]; then
+	cp amdgpu-fancontrol.cfg /opt/amdgpu-fancontrol/amdgpu-fancontrol.cfg.new
+else
+	cp amdgpu-fancontrol.cfg /opt/amdgpu-fancontrol/
+fi
 mkdir -p /etc/systemd/system
 cp amdgpu-fancontrol.service /etc/systemd/system/
 
