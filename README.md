@@ -22,6 +22,6 @@ Formula: PWM=FS%x255
 
 This script was initially meant as an example. Please don't just run it naively and keep in mind that I'm not responsible for failures.
 
-Tested running with AMD RX 480 8GB on Ubuntu 22.04 LTS
+Tested running with AMD RX 480 8GB and AMD RX 6600 XT on Ubuntu 24.04 LTS
 
 Thanks to [gtmat](https://github.com/grmat/amdgpu-fancontrol) for this great script.
